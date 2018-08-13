@@ -1,0 +1,288 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+   
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TnT '83</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#41FF00">
+	<meta name="msapplication-TileColor" content="#282828">
+	<meta name="theme-color" content="#282828">
+    <link rel="stylesheet" href="assets/css/primary.css?v=1.7">
+    <!-- JavaScript Framework by JQuery - https://jquery.com/ -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- simpleWebstorage by Zevero - https://github.com/zevero/simpleWebstorage -->
+    <script src="assets/js/simplestore.min.js"></script>
+</head>
+<body>
+	<div class="main-container">
+		<div>
+			<div class="game-container">
+				<div style="position: relative;">
+					<p><a id="mainMenuButton" class="hidden" onclick="showMenu()">[ Menu ]</a>&nbsp;</p>
+				</div>
+			</div>
+		</div>
+		<div id="mainSplash" class="">
+			<div class="game-container">
+				<div style="position: relative;">
+
+<pre id="splash1" class="center hidden">
+ _____                                          
+/__   \ _ __  ___   __ _  ___  _   _  _ __  ___ 
+  / /\/| '__|/ _ \ / _` |/ __|| | | || '__|/ _ \
+ / /   | |  |  __/| (_| |\__ \| |_| || |  |  __/
+ \/    |_|   \___| \__,_||___/ \__,_||_|   \___|
+                                                
+    _         _____                             
+   ( )_ __   /__   \ _ __  __ _  _ __   ___     
+   |/| '_ \    / /\/| '__|/ _` || '_ \ / __|    
+     | | | |  / /   | |  | (_| || |_) |\__ \    
+     |_| |_|  \/    |_|   \__,_|| .__/ |___/    
+                                |_|             
+
+</pre>
+<pre id="splash2" class="center hidden">
+    _____                           _           
+   /__   \ _ __  __ _  _ __   ___  ( )_ __      
+     / /\/| '__|/ _` || '_ \ / __| |/| '_ \     
+    / /   | |  | (_| || |_) |\__ \   | | | |    
+    \/    |_|   \__,_|| .__/ |___/   |_| |_|    
+                      |_|                       
+ _____                                          
+/__   \ _ __  ___   __ _  ___  _   _  _ __  ___ 
+  / /\/| '__|/ _ \ / _` |/ __|| | | || '__|/ _ \
+ / /   | |  |  __/| (_| |\__ \| |_| || |  |  __/
+ \/    |_|   \___| \__,_||___/ \__,_||_|   \___|
+                                                
+
+</pre>
+<pre id="splash3" class="center hidden">
+        _____                                   
+       /__   \ _ __  __ _  _ __   ___           
+         / /\/| '__|/ _` || '_ \ / __|          
+        / /   | |  | (_| || |_) |\__ \          
+        \/    |_|   \__,_|| .__/ |___/          
+                          |_|                   
+                               _                
+              __ _  _ __    __| |               
+             / _` || '_ \  / _` |               
+            | (_| || | | || (_| |               
+             \__,_||_| |_| \__,_|               
+                                                
+ _____                                          
+/__   \ _ __  ___   __ _  ___  _   _  _ __  ___ 
+  / /\/| '__|/ _ \ / _` |/ __|| | | || '__|/ _ \
+ / /   | |  |  __/| (_| |\__ \| |_| || |  |  __/
+ \/    |_|   \___| \__,_||___/ \__,_||_|   \___|
+</pre>
+<pre id="splash4" class="center hidden">
+ _____                                          
+/__   \ _ __  ___   __ _  ___  _   _  _ __  ___ 
+  / /\/| '__|/ _ \ / _` |/ __|| | | || '__|/ _ \
+ / /   | |  |  __/| (_| |\__ \| |_| || |  |  __/
+ \/    |_|   \___| \__,_||___/ \__,_||_|   \___|
+         
+                               _                
+              __ _  _ __    __| |               
+             / _` || '_ \  / _` |               
+            | (_| || | | || (_| |               
+   \__,_||_| |_| \__,_|     
+			 
+        _____                                   
+       /__   \ _ __  __ _  _ __   ___           
+         / /\/| '__|/ _` || '_ \ / __|          
+        / /   | |  | (_| || |_) |\__ \          
+        \/    |_|   \__,_|| .__/ |___/          
+                 |_|          
+</pre>
+					<p>&nbsp;</p>
+					<p class="center" id="startGameLink"><a class="bigLink" onclick="startGame()">[ Start Game ]</a></p>
+					<p class="center hidden" id="resumeGameLink"><a class="bigLink" onclick="resumeGame()">[ Resume Game ]</a></p>
+					<p class="center hidden" id="resetGameLink"><a onclick="resetGame()">[ Reset Game ]</a></p>
+					<p class="center"><a onclick="showTutorial()">[ Game Manual ]</a></p>
+					<p class="center"><a onclick="showMorgue()">[ The Morgue ]</a></p>
+					<p class="center"><a onclick="showSaveLoad()">[ Save/Load ]</a></p>
+					<p class="center"><a onclick="showExclusives()">[ Exclusives ]</a></p>
+				</div>
+			</div>
+		</div>
+		<div id="mainTutorial" class="hidden">
+			<div class="game-container">
+				<div style="position: relative;">
+					<p class="mainHeader">Tutorial</p>
+					<p>
+						<a onclick="goToByScroll('history');return false;">[ History ]</a><br />
+						<a onclick="goToByScroll('prologue');return false;">[ Prologue ]</a><br />
+						<a onclick="goToByScroll('play');return false;">[ How To Play ]</a><br />
+						<a onclick="goToByScroll('legend');return false;">[ Legend ]</a><br />
+						<a onclick="goToByScroll('save');return false;">[ Save/Load ]</a><br />
+						<a onclick="goToByScroll('build');return false;">[ Realm Builder ]</a><br />
+						<a onclick="goToByScroll('open');return false;">[ Open Source ]</a><br />	
+						<a onclick="goToByScroll('exclusive');return false;">[ Exclusives ]</a>	
+					<br /><br />
+					<p id="history"><b>History:</b>
+					<p>The year? 1983. The goal? Highest Jolt Cola pyramid. 
+					<p>We had 48K RAM computers, green screens, 300 baud modems and just enough BASIC programming skills.
+					<p>From this was born a viral video game and, mostly unrelated, a local BBS. And by viral we mean copied by perhaps a dozen kids at our local junior high school.
+					<p>It was stupid. It was fun. And it entertained a few for awhile. So we have decided to recreate that fun for you.
+					<div><a class="right" onclick="goToByScroll('mainMenuButton')">[ Top ]</a></div>
+					<div><a class="right" onclick="showMenu()">[ Menu ]</a></div>
+					<p id="prologue"><b>Prologue:</b>
+					<p>As you struggle to open an eye just enough to make out some light, you can see that you are at the bottom of a rather deep pit. Or is it a well?
+					<p>Maybe you fell. Maybe you were tossed in. Either way, you feel like you have just been sucked through a very small straw and spit back out onto the floor.
+					<p>Sadly, there does not seem to be any way out.
+					<div><a class="right" onclick="goToByScroll('mainMenuButton')">[ Top ]</a></div>
+					<div><a class="right" onclick="showMenu()">[ Menu ]</a></div>
+					<p id="play"><b>How to play:</b>
+					<p>Explore. Fight. Explore some more. Then more fighting. Lots and lots of fighting. Oh yeah, also try to avoid the traps. Fortunately, there is a lot of treasure. So go get it!
+					<p>While how to win the game is something you need to figure out, the general goal of the game is to acquire the most Gold (GLD) in the least amount of Moves (MOV) as you work your way through the many Levels (LVL) of the realm. The Great Hall of Heroes awaits you.
+					<p>Treasure is acquired by defeating adversaries, searching rooms and summoning Ted. Treasure can be in the form of Armor, Weapons, Magic, Potions or Valuables. Armor, Weapons or Magic automatically replace currently equipped items with lower stats. All treasure (except potions) not equipped are automatically converted to Gold.
+					<p>Your character has Strength (STR) to determine hit and misses in battle, Intelligence (INT) to determine magic hits and misses in battle, Perception (PER) to determine search success, Dexterity (DEX) to determine chance of dodging attacks, obstacles and traps and Luck (LCK) to determine probability of spawning adversaries, obstacles, traps and treasure.
+					<p>You also have Armor (ARM) for damage resistance, Weapon (WPN) and Magic (MAG) for damage inflicted and Hit Points (HP) for the amount of damage you can take from adversaries and traps.
+					<p>Gain Experience Points (XP) along the way in order to increase your character Level (CLV). Level progression increases game difficulty but awards you Ability Points (AP) that you can apply to your character abilities.
+					<p>You can explore the realm by exiting rooms [North], [East], [South], [West], [Up], [Down]. Use [Search] to discover hidden treasure and secret doors. [Stuff] views your characters abilities, equipped items and more.
+					<p>[Stuff] also allows you to [Heal], [Level Up] and [Summon]. Heal restores HP with healing Potions (POT). When you have the required XP, Level Up appears allowing you to assign AP to your character. Summon hails Ted the Teleporting Merchant to purchase healing potions, armor, weapons and magic  with Gold and has a cool off period of ten (10) turns.
+					<p>Exits can be open, blocked, locked or trapped. Move towards an exit to unblock, unlock or disarm. To unblock you can [Shove] the obstacle by using your strength  or [Blast] using your magic if you have a magic item equipped. To unlock you can [Pick] the lock using your dexterity or [Kick] it down using your strength. If the exit is trapped, you can attempt to [Disarm] it using your dexterity or [Ignore] it and move forward anyway using your luck to potentially avoid it.
+					<p>A spawned adversary must be dealt with before you may continue. Adversary controls are [Weapon], [Magic], [Combo], [Heal] and [Run!]. Combo deals a powerful strike when Weapon and Magic are both available. Weapon can be used every turn. Magic can be used once every three (3) turns. If death is certain, Run to get away but it is a mad dash through rooms on your current level so you could end up anywhere and your adversary has a small chance to get a final blow in before you flee. Oh yeah, running away also adds moves as a penalty.
+					<p>When a room trap spawns, you have a chance to avoid or disarm it based on your DEX and LCK. Otherwise, you will take damage and lose HP.
+					<p>Should you run out of Hit Points and subsequently die, you will be revived in a designated room (usually the beginning) on your current level. You will also be given a fraction of your Hit Points and be given penalty moves based on your current level.
+					<p>Happy hunting!
+					<div><a class="right" onclick="goToByScroll('mainMenuButton')">[ Top ]</a></div>
+					<div><a class="right" onclick="showMenu()">[ Menu ]</a></div>
+					<p id="legend"><b>Legend:</b>
+					<p><img src="assets/img/tnt_legend.png" width="100%" />
+					<div><a class="right" onclick="goToByScroll('mainMenuButton')">[ Top ]</a></div>
+					<div><a class="right" onclick="showMenu()">[ Menu ]</a></div>
+					<p id="save"><b>Save/Load:</b>
+					<p>Do you want to save your game? Or load your game on a different device?
+					<p>By default, your game is automatically saved on the client (browser) using local storage so when you come back to the game, it remembers where you left off. However, if you clear your browsers cache, it will all be erased.
+					<p>We wanted a way where we could save games on the cloud but not require you to create yet another login with yet another password to forget. So we came up with load codes. 
+					<p>Load codes are saved on the cloud and point to all of your current game data. You only need the code to reload an existing game on a different device or the same one that may have had its cache cleared.
+					<p>Codes are generated and loaded on the [Save/Load] screen. If you want, you can associate your game saves with an email address. You will receive all load codes for games saved with that email.
+					<div><a class="right" onclick="goToByScroll('mainMenuButton')">[ Top ]</a></div>
+					<div><a class="right" onclick="showMenu()">[ Menu ]</a></div>
+					<p id="build"><b>Realm Builder:</b>
+					<p>In the near future we will publish our Realm Builder that allows anyone to create their own realms and stories using our Realm Crawler Engine.
+					<p>Your imagination is the limit to where you can go. Create a creepy new dungeon or a space adventure set billions of light years away.
+					<p>The engine is built as generic as possible to allow for a wide range of stories to be told. Of course, we will be constantly updating our engine so it continues to meet the needs of our gamers and realm builders.
+					<div><a class="right" onclick="goToByScroll('mainMenuButton')">[ Top ]</a></div>
+					<div><a class="right" onclick="showMenu()">[ Menu ]</a></div>
+					<p id="open"><b>Open Source:</b>
+					<p>All of the HTML, CSS, JavaScript and the JSON game data templates that constitute the Realm Crawler Engine are licensed under <a href="http://mozilla.org/MPL/2.0/" target="_blank">[Mozilla Public License (MPL 2)]</a>. This is a copyleft license which means you are free to copy, modify and distribute this code without restriction except that you must continue to license it under the MPL.
+					<p>Rowdy Robot reserves all rights to its trademarks and proprietary data. Traps and Treasure and its game data including new realms, bonus and exclusive content are copyrighted by Rowdy Robot. You are welcome to use our game data for testing and enlightenment but only the generic JSON game data templates can be distributed under the MPL.
+					<p>In other words, make your own game! You will be glad you did and have way more fun too.
+					<p>Source code for the Realm Crawler Engine can be found on <a href="https://github.com/rowdyrobot/" target="_blank">[GitHub]</a>.
+					<div><a class="right" onclick="goToByScroll('mainMenuButton')">[ Top ]</a></div>
+					<div><a class="right" onclick="showMenu()">[ Menu ]</a></div>
+					<p id="exclusive"><b>Exclusives:</b>
+					<p>We are so grateful and honored you love playing Traps and Treasure! A lot of joy and sleepless nights have gone into making this for you.
+					<p>We are constantly working on new realms and games but it takes time, energy and money to make them a reality. We also have bonus content for our original game including exlusive traps, treasures and adversaries.
+					<p>With your support we will continue to keep our games ad free and provide you with new realms and games including bonus content and game improvements.
+					<p>As a show of appreciation to anyone that makes a donation or purchases some swag, we will provide a sponsor code that can be used to access more realms and content.
+					<p>We use <a href="https://www.patreon.com/rowdyrobot/" target="_blank">[Patreon]</a> for donations and <a href="" target="_blank">[Red Bubble]</a> for merchandise. We appreciate your support and thanks for playing!
+					<div><a class="right" onclick="goToByScroll('mainMenuButton')">[ Top ]</a></div>
+					<div><a class="right" onclick="showMenu()">[ Menu ]</a></div>
+				</div>
+			</div>
+		</div>
+		<div id="mainMorgue" class="hidden">
+			<div class="game-container">
+				<div style="position: relative;">
+					<p class="mainHeader">The Morgue</p>
+					<p>Things you collect on your journey are displayed here.
+					<div id="morgueContainer"></div>
+				</div>
+			</div>
+		</div>
+		<div id="mainSave" class="hidden">
+			<div class="game-container">
+				<div style="position: relative;">
+						<p class="mainHeader">Save/Load</p>
+						<p>*** Under Construction ***
+						<p><a onclick="showSaveGame()">[ Save Game ]</a>
+						<div id="saveGame" class="hidden">
+							<p>Your game has been saved.
+							<p>Load code: <b>TBD</b>
+							<p>Provide an email to have your load code and game link sent to your inbox. </p>
+							<input type="text" id="txtEmail" class="terminalInput" placeholder="Email for game saves" />
+							<a onclick="sendGameSave()">[ Send ]</a>
+							<div id="gameSaveSent" class="hidden">
+								<b>Email has been sent.</b>
+							</div>
+						</div>
+						<p>&nbsp;
+						<p><a onclick="showLoadGame()">[ Load Game ]</a>
+						<div id="loadGame" class="hidden">
+							<input type="text" id="txtLoadCode" class="terminalInput" placeholder="Enter your load code" />
+							<a onclick="loadGame()">[ Load ]</a>
+							<div id="loadingGame" class="hidden">
+								<b class="loading">Loading game</b>
+							</div>
+						</div>
+						<p>&nbsp;
+						<p><a onclick="showBonusContent()">[ Bonus Content ]</a>
+						<div id="bonusContent" class="hidden">
+							<p>Don't have a sponsor code? Check out <a onclick="showExclusives()">[Exclusives]</a> to get bonus content.</p>
+							<input type="text" id="txtSponsorCode" class="terminalInput" placeholder="Enter sponsor code" />
+							<a onclick="getBonusContent()">[ Go ]</a>
+							<div id="displayBonusContent" class="hidden">
+								<p>Bonus content shown below:</p>
+								<b>TBD</b>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div id="mainSupport" class="hidden">
+			<div class="game-container">
+				<div style="position: relative;">
+					<p class="mainHeader">Exclusives</p>
+					<p>*** Under Construction ***
+					<p>Enjoying the game? Thanks for playing!
+					<p>Help us make the game even more awesome with new realms and updates. Get exlusive access and game content for any donation or purchase.
+					<p>Already a supporter? Head over to <a onclick="showSaveLoad()">[Save/Load]</a> and enter your sponsor code.
+					<p>Thanks for your support!
+					<p class="center"><a href="https://patreon.com/rowdyrobot" target="_blank">[ Donate ]</a> &nbsp; &nbsp; <a onclick="">[ Shop ]</a></p>
+				</div>
+			</div>
+		</div>
+		<div id="mainGame" class="hidden">
+			<div class="game-container">
+				<div style="position: relative;">
+					<svg viewbox="0 0 480 22">
+					<!-- header -->
+					 <text x="0" y="20" fill="#41FF00" id="playerStats"></text>
+					 <text x="480" y="20" fill="#41FF00" id="realmStats" text-anchor="end"></text>
+					  Sorry, your browser does not support inline SVG.
+					</svg>
+				</div>
+			</div>
+			<div class="game-container">
+				<div style="position: relative;">
+					<svg viewbox="0 0 480 480" id="svgRoom">			 
+					  Sorry, your browser does not support inline SVG.
+					</svg>
+				</div>
+			</div>
+			<div class="game-container">
+				<div style="position: relative;">
+					<svg id="svgControls" viewbox="0 0 480 112">
+					  Sorry, your browser does not support inline SVG.
+					</svg>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- TnT Game Engine by RR -->
+    <script src="assets/js/crawl.engine.js?v=1.8"></script>
+	<script src="assets/js/tnt.page.js?v=1.3"></script>
+</body>
+</html>
