@@ -1,0 +1,23 @@
+[
+	{
+		"experienceLevel": 0,
+		"experienceRequired": 0, 
+		"experienceAP": 0, 
+		"experienceHP": 1,
+		"experienceName": "Placeholder"
+	},
+	{
+		"experienceLevel": 1,
+		"experienceRequired": 5, 
+		"experienceAP": 2,
+		"experienceHP": 10,
+		"experienceName": "Green Horn"
+	},
+	{
+		"experienceLevel": 2,
+		"experienceRequired": 50, 
+		"experienceAP": 2,
+		"experienceHP": 5,
+		"experienceName": "Not So Green"
+	}
+]

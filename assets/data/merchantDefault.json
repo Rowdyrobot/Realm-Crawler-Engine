@@ -1,0 +1,72 @@
+{
+	"merchantName": "Ted",
+	"merchantDescription": "Ted is cool but maybe a little unstable.", 
+	"merchantRespawnMoves": 10,
+	"merchantItems":
+	[
+		{
+			"itemID": 2, 
+			"itemValue": 50,
+			"itemLevelMultiplier": 1,
+			"itemMaxCount": null,
+			"itemMinPlayerLevel": null,
+			"itemMinLevel": null, 
+			"itemMaxLevel": null
+		},
+		{
+			"itemID": 3, 
+			"itemValue": 20,
+			"itemLevelMultiplier": 1,
+			"itemMaxCount": null,
+			"itemMinPlayerLevel": null,
+			"itemMinLevel": null, 
+			"itemMaxLevel": null
+		},
+		{
+			"itemID": 4, 
+			"itemValue": 50,
+			"itemMaxCount": 1,
+			"itemLevelMultiplier": 1,
+			"itemMinPlayerLevel": null,
+			"itemMinLevel": null, 
+			"itemMaxLevel": null
+		},
+		{
+			"itemID": 5, 
+			"itemValue": 80,
+			"itemMaxCount": 1,
+			"itemLevelMultiplier": 1,
+			"itemMinPlayerLevel": null,
+			"itemMinLevel": null, 
+			"itemMaxLevel": null
+		},
+		{
+			"itemID": 6, 
+			"itemValue": 500,
+			"itemMaxCount": 1,
+			"itemLevelMultiplier": 1,
+			"itemMinPlayerLevel": null,
+			"itemMinLevel": null, 
+			"itemMaxLevel": null
+		},
+		{
+			"itemID": 7, 
+			"itemValue": 3130,
+			"itemMaxCount": 1,
+			"itemLevelMultiplier": 1,
+			"itemMinPlayerLevel": null,
+			"itemMinLevel": 1, 
+			"itemMaxLevel": null
+		},
+		{
+			"itemID": 8, 
+			"itemValue": 220,
+			"itemMaxCount": 1,
+			"itemLevelMultiplier": 1,
+			"itemMinPlayerLevel": null,
+			"itemMinLevel": 1, 
+			"itemMaxLevel": null
+		}
+	]
+}
+

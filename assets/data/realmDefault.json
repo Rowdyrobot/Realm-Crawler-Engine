@@ -1,0 +1,288 @@
+{
+	"realmName": "Traps and Treasure", 
+	"realmID": 1, 
+	"realmLevelToWin": 1,
+	"realmRoomToWin": 0,
+	"realmTreasureToWin": 7,
+	"realmWonMessage": "Amazingly you have survived and found the exit out of this miserable realm.",
+	"Levels": 
+	[
+		{
+			"levelNumber": 0, 
+			"levelRollMax": 10, 
+			"levelTreasureRoll": 5, 
+			"levelTrapRoll": 3, 
+			"levelAdversaryRoll": 4,
+			"levelObstacleRoll": 6, 
+			"levelSecretDoorXP": 7,
+			"levelDeadMoves": 50,
+			"levelRunMoves": 20,
+			"levelDeadHPDivider": 2,
+			"Rooms": 
+			[
+				{
+					"roomID": 0, 
+					"roomName": "Dizzingly Deep Pit", 
+					"roomDescriptionOnce": "You open a blurry eye and see sunlight streaming down in from the top of a very deep pit that you are at the bottom of. How did you get here?<p>You cannot see a way out.",
+					"roomDescription": null,
+					"roomTreasureID": null,
+					"roomTreasureRandom": null,
+					"roomTrapID": null,
+					"roomTrapRandom": 1,
+					"roomAdversaryID": null,
+					"roomAdversaryRandom": null,
+					"Exits": 
+					[
+						{
+							"exitDirection": "North", 
+							"exitSecret": 1, 
+							"exitRoomID": 1, 
+							"newLevelID": null,
+                            "exitLocked": null,
+                            "exitBlocked": null,
+                            "exitTrapped": null
+
+						}, 
+						{
+							"exitDirection": "South", 
+							"exitSecret": 1, 
+							"exitRoomID": 3,
+							"newLevelID": null,
+                            "exitLocked": null,
+                            "exitBlocked": 2,
+                            "exitTrapped": null
+						}, 
+						{
+							"exitDirection": "East", 
+							"exitSecret": 1, 
+							"exitRoomID": 2,
+							"newLevelID": null,
+                            "exitLocked": null,
+                            "exitBlocked": null,
+                            "exitTrapped": 2
+						}, 
+						{
+							"exitDirection": "West", 
+							"exitSecret": 1, 
+							"exitRoomID": 4,
+							"newLevelID": null,
+                            "exitLocked": 2,
+                            "exitBlocked": null,
+                            "exitTrapped": null
+						}
+					]
+				},
+				{
+					"roomID": 1,
+					"roomName": "Northern Reach",
+					"roomDescriptionOnce": null,
+					"roomDescription": null,
+					"roomTreasureID": 3,
+					"roomTreasureRandom": 2,
+					"roomTrapID": 0,
+					"roomTrapRandom": 1,
+					"roomAdversaryID": 2,
+					"roomAdversaryRandom": 3,
+					"Exits":
+					[
+						{
+							"exitDirection": "South",
+							"exitSecret": 0,
+							"exitRoomID": 0,
+							"newLevelID": null,
+                            "exitLocked": null,
+                            "exitBlocked": null,
+                            "exitTrapped": null
+						}
+					]
+				},
+				{
+					"roomID": 2, 
+					"roomName": "Eastern Hall", 
+					"roomDescriptionOnce": null,
+					"roomDescription": null, 
+					"roomTreasureID": null,  
+					"roomTreasureRandom": null,
+					"roomTrapID": null, 
+					"roomTrapRandom": null,
+					"roomAdversaryID": null,
+					"roomAdversaryRandom": null, 
+					"Exits": 
+					[
+						{
+							"exitDirection": "West", 
+							"exitSecret": 0, 
+							"exitRoomID": 0,
+							"newLevelID": null,
+                            "exitLocked": null,
+                            "exitBlocked": null,
+                            "exitTrapped": null
+						}
+					]
+				},
+				{
+					"roomID": 3, 
+					"roomName": "Southern Room", 
+					"roomDescriptionOnce": null,
+					"roomDescription": null, 
+					"roomTreasureID": null, 
+					"roomTreasureRandom": null,
+					"roomTrapID": null, 
+					"roomTrapRandom": 1,
+					"roomAdversaryID": null,
+					"roomAdversaryRandom": null, 
+					"Exits": 
+					[
+						{
+							"exitDirection": "East", 
+							"exitSecret": 0, 
+							"exitRoomID": 0,
+							"newLevelID": null,
+                            "exitLocked": null,
+                            "exitBlocked": null,
+                            "exitTrapped": null
+						},
+						{
+							"exitDirection": "Down", 
+							"exitSecret": 0, 
+							"exitRoomID": 5,
+							"newLevelID": null,
+                            "exitLocked": null,
+                            "exitBlocked": 1,
+                            "exitTrapped": null
+						}
+					]
+				},
+				{
+					"roomID": 4, 
+					"roomName": "West Wing", 
+					"roomDescriptionOnce": null,
+					"roomDescription": null, 
+					"roomTreasureID": 3, 
+					"roomTreasureRandom": 1,
+					"roomTrapID": null, 
+					"roomTrapRandom": null,
+					"roomAdversaryID": null,
+					"roomAdversaryRandom": null, 
+					"Exits": 
+					[
+						{
+							"exitDirection": "East", 
+							"exitSecret": 0, 
+							"exitRoomID": 0,
+							"newLevelID": null,
+                            "exitLocked": null,
+                            "exitBlocked": null,
+                            "exitTrapped": null
+						},
+						{
+							"exitDirection": "West", 
+							"exitSecret": 0, 
+							"exitRoomID": 6,
+							"newLevelID": null,
+                            "exitLocked": null,
+                            "exitBlocked": null,
+                            "exitTrapped": null
+						}
+					]
+				},
+				{
+					"roomID": 5, 
+					"roomName": "Basement", 
+					"roomDescriptionOnce": null,
+					"roomDescription": null, 
+					"roomTreasureID": 7, 
+					"roomTreasureRandom": 1,
+					"roomTrapID": null, 
+					"roomTrapRandom": 1,
+					"roomAdversaryID": null,
+					"roomAdversaryRandom": null, 
+					"Exits": 
+					[
+						{
+							"exitDirection": "Up", 
+							"exitSecret": 0, 
+							"exitRoomID": 3,
+							"newLevelID": null,
+                            "exitLocked": 1,
+                            "exitBlocked": null,
+                            "exitTrapped": null
+						},
+						{
+							"exitDirection": "South", 
+							"exitSecret": null, 
+							"exitRoomID": 0,
+							"newLevelID": 1,
+                            "exitLocked": 1,
+                            "exitBlocked": null,
+                            "exitTrapped": null
+						}
+					]
+				},
+				{
+					"roomID": 6, 
+					"roomName": "West West Wing", 
+					"roomDescriptionOnce": null,
+					"roomDescription": null, 
+					"roomTreasureID": 2, 
+					"roomTreasureRandom": null,
+					"roomTrapID": null,
+					"roomTrapRandom": null,
+					"roomAdversaryID": null,
+					"roomAdversaryRandom": null, 
+					"Exits": 
+					[
+						{
+							"exitDirection": "East", 
+							"exitSecret": 0, 
+							"exitRoomID": 4,
+							"newLevelID": null,
+                            "exitLocked": null,
+                            "exitBlocked": null,
+                            "exitTrapped": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"levelNumber": 1, 
+			"levelRollMax": 10, 
+			"levelTreasureRoll": 5, 
+			"levelTrapRoll": 3, 
+			"levelAdversaryRoll": 4, 
+			"levelObstacleRoll": 6, 
+			"levelSecretDoorXP": 7,
+			"levelDeadMoves": 50,
+			"levelRunMoves": 20,
+			"levelDeadHPDivider": 2,
+			"Rooms": 
+			[
+				{
+					"roomID": 0, 
+					"roomName": "Level 2 Swamp", 
+					"roomDescriptionOnce": "You made it to the second level of this realm<p>Not much to do here.",
+					"roomDescription": null,
+					"roomTreasureID": null,
+					"roomTreasureRandom": null,
+					"roomTrapID": null,
+					"roomTrapRandom": null,
+					"roomAdversaryID": null,
+					"roomAdversaryRandom": 1,
+					"Exits": 
+					[
+						{
+							"exitDirection": "Up", 
+							"exitSecret": null, 
+							"exitRoomID": 5, 
+							"newLevelID": 0,
+                            "exitLocked": null,
+                            "exitBlocked": null,
+                            "exitTrapped": null
+						}
+					]
+				}
+			]
+		}
+	]	
+}

@@ -1,0 +1,28 @@
+[
+	{
+		"trapID": 0,
+		"trapType": null, 
+		"trapName": "Nail In The Floor",
+		"trapDescription": null,
+		"trapDamage": 1,
+		"trapExperience": 5, 
+		"trapLevelMultiplier": 2, 
+		"trapMinLevel": null,
+		"trapMaxLevel": null, 
+		"trapAllowRandom": 1,
+		"trapMaxSpawn": null 
+	},
+	{
+		"trapID": 1,
+		"trapType": null, 
+		"trapName": "Swinging Axe",
+		"trapDescription": null,
+		"trapDamage": 2,
+		"trapExperience": 7, 
+		"trapLevelMultiplier": 1, 
+		"trapMinLevel": null,
+		"trapMaxLevel": null, 
+		"trapAllowRandom": 1,
+		"trapMaxSpawn": null 
+	}
+]
