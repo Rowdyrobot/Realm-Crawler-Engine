@@ -1,0 +1,200 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/*@font-face {
+    font-family: "AppleII";
+    src: url(AppleII.ttf) format("truetype");
+}*/
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+	font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+	background-color: #282828;
+	color: #41FF00;
+}
+
+a {
+	color: #41FF00;
+	text-decoration: none;
+	border: 0;
+	cursor: pointer;
+}
+
+table {
+    border-spacing:0px;
+}
+
+.center {
+	text-align: center;	
+}
+
+.hidden {
+	display: none;
+}
+
+.terminalInput {
+	border: 1px dotted #207f00;
+	background-color: #282828;
+	color: #41FF00;
+	padding: 5px;
+	font-size: inherit;
+	font-family: inherit;
+	outline: none;
+	overflow: hidden;
+}
+
+.terminalInput:focus {
+	border-color: #41FF00;
+}
+
+::placeholder {
+    color: #207f00;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #207f00;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #207f00;
+}
+
+.main-container {
+	margin: 15px;
+}
+
+.menu-container {
+	position: relative;
+	max-width: 300px;
+    display: block;
+    margin: auto;
+}
+
+.menuHeader {
+	 font-size: 24px;
+	 font-weight: 700;
+}
+
+.mainHeader {
+	 font-size: 24px;
+	 font-weight: 700;
+	 text-align: center;
+}
+
+.morgueBox {
+	border: solid 1px;
+	padding: 5px 15px 5px 15px;
+	margin-bottom: 15px;	
+}
+
+.game-container {
+	position: relative;
+	max-width: 480px;
+    display: block;
+    margin: auto;
+}
+
+.footer {
+	font-size: .9em;
+	text-align: center;
+}
+
+.right {
+	float: right;
+}
+
+.bigLink {
+	font-size: large;
+}
+
+#wallNorth, #wallEast, #wallSouth, #wallWest {
+	stroke:#41FF00;
+	stroke-width:60
+}
+
+#doorNorth, #doorEast, #doorSouth, #doorWest {
+	 stroke: #282828;
+	 stroke-width: 62;
+}
+
+#playerWeapon, #playerMagic, #stairsUp, #stairsDown {
+	stroke:#41FF00;
+	stroke-width:10;
+	fill: none;
+}
+
+#obstacleUp, #obstacleDown {
+	stroke:#282828;
+	stroke-width:11;
+	fill: none;
+}
+
+#obstacleNorth, #obstacleEast, #obstacleSouth, #obstacleWest, #adversarySmall, #adversaryMedium, #adversaryBig  {
+	fill: #41FF00;
+}
+
+#terminalText {
+	overflow: hidden;
+	height: 135px;
+}
+
+#merchant {
+	fill: #41FF00;
+	stroke: #41FF00;
+	stroke-width: 2;
+}
+
+.buttonGroup {
+	cursor: pointer;	
+}
+
+.button {
+	fill: #282828;
+	stroke: #41FF00;
+	stroke-width: 2;
+}
+
+.buttonDisabled {
+	fill: #282828;
+	stroke: #207f00;
+	stroke-width: 2;
+}
+
+.splash {
+	fill: #282828;
+	stroke: #41FF00;
+	stroke-width: 10;
+}
+
+/* loading dots */
+.loading:after {
+  content: ' .';
+  animation: dots 1s steps(5, end) infinite;}
+
+@keyframes dots {
+  0%, 20% {
+    color: rgba(0,0,0,0);
+    text-shadow:
+      .25em 0 0 rgba(0,0,0,0),
+      .5em 0 0 rgba(0,0,0,0);}
+  40% {
+    color: #41FF00;
+    text-shadow:
+      .25em 0 0 rgba(0,0,0,0),
+      .5em 0 0 rgba(0,0,0,0);}
+  60% {
+    text-shadow:
+      .25em 0 0 #41FF00,
+      .5em 0 0 rgba(0,0,0,0);}
+  80%, 100% {
+    text-shadow:
+      .25em 0 0 #41FF00,
+      .5em 0 0 #41FF00;}}
