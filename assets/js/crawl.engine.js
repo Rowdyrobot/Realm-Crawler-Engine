@@ -111,8 +111,6 @@ function buildRoom() {
 	
 	svgRoomData = '<line x1="0" y1="0" x2="480" y2="0" id="wallNorth" /><line x1="480" y1="480" x2="480" y2="0" id="wallEast" /><line x1="0" y1="480" x2="480" y2="480" id="wallSouth" /><line x1="0" y1="0" x2="0" y2="480" id="wallWest" /><circle cx="240" cy="240" r="20" fill="#41FF00" id="playerBody" /><text x="240" y="60" fill="#41FF00" text-anchor="middle" id="roomHeaderText" class=""></text><text x="240" y="80" fill="#41FF00" text-anchor="middle" id="roomSubHeaderText" class=""></text><switch><foreignObject x="50" y="302" width="388" height="165"><p id="terminalText"></p></foreignObject><text x="240" y="330" fill="#41FF00" text-anchor="middle">Your SVG viewer cannot display html.</text></switch>';
 	
-	//svgRoomData += '<polyline points="225,15 240,30 255,15 240,1 225,15" id="obstacleNorth" class="hidden" /><polyline points="465,225 480,240 465,255 450,240 465,225" id="obstacleEast" class="hidden" /><polyline points="225,465 240,480 255,465 240,450 225,465" id="obstacleSouth" class="hidden" /><polyline points="15,225 30,240 15,255 1,240 15,225" id="obstacleWest" class="hidden" />';
-	
 	svgRoomData += '<polyline points="240,90 260,120, 220,120 240,90" id="adversarySmall" class="hidden" /><polyline points="240,90 280,140, 200,140 240,90" id="adversaryMedium" class="hidden" /><polyline points="240,90 300,160, 180,160 240,90" id="adversaryBig" class="hidden" />';
 	
 	svgRoomData += '<rect x="215" y="115" width="50" height="50" fill="#41FF00" id="merchant" class="hidden" />';
@@ -121,7 +119,6 @@ function buildRoom() {
 		svgRoomData += '<polyline points="280,220 280,260 280,247 267,247 293,247" id="playerWeapon" />';
 	else
 		svgRoomData += '<polyline class="hidden" points="280,220 280,260 280,247 267,247 293,247" id="playerWeapon" />';
-	//svgRoomData += '<polyline points="280,220 280,260 280,250 270,250 290,250" id="playerWeapon" />';
 	
 	if (playerData.currentMagicIndex != null)
 		svgRoomData += '<line x1="200" y1="220" x2="200" y2="260" id="playerMagic" />';
@@ -140,7 +137,7 @@ function buildRoom() {
 					svgControlData += '<g class="buttonGroup" id="" onclick="playerMove(' + x + ',' + j + ',' + l + ')"><rect x="1" y="15" width="104" height="40" class="button" /><text x="52" y="40" fill="#41FF00" text-anchor="middle">North</text></g>';
 					svgRoomData += '<line x1="160" y1="0" x2="320" y2="0" id="doorNorth" />';
 					
-					if (realmData.Levels[level].Rooms[room].Exits[j].exitLocked == 1 ||realmData.Levels[level].Rooms[room].Exits[j].exitBlocked == 1 ||realmData.Levels[level].Rooms[room].Exits[j].exitTrapped == 1) {
+					if (realmData.Levels[level].Rooms[room].Exits[j].exitLocked == 1 || realmData.Levels[level].Rooms[room].Exits[j].exitBlocked == 1 || realmData.Levels[level].Rooms[room].Exits[j].exitTrapped == 1) {
 						svgRoomData += '<polyline points="225,15 240,30 255,15 240,1 225,15" id="obstacleNorth" />';
 					}
 					else
@@ -150,7 +147,7 @@ function buildRoom() {
 					svgControlData += '<g class="buttonGroup" id="" onclick="playerMove(' + x + ',' + j + ',' + l + ')"><rect x="125" y="15" width="104" height="40" class="button" /><text x="177" y="40" fill="#41FF00" text-anchor="middle">East</text></g>';
 					svgRoomData += '<line x1="480" y1="160" x2="480" y2="320" id="doorEast" />';
 					
-					if (realmData.Levels[level].Rooms[room].Exits[j].exitLocked == 1 ||realmData.Levels[level].Rooms[room].Exits[j].exitBlocked == 1 ||realmData.Levels[level].Rooms[room].Exits[j].exitTrapped == 1) {
+					if (realmData.Levels[level].Rooms[room].Exits[j].exitLocked == 1 || realmData.Levels[level].Rooms[room].Exits[j].exitBlocked == 1 || realmData.Levels[level].Rooms[room].Exits[j].exitTrapped == 1) {
 						svgRoomData += '<polyline points="465,225 480,240 465,255 450,240 465,225" id="obstacleEast" />';
 					}
 					else
@@ -160,7 +157,7 @@ function buildRoom() {
 					svgControlData += '<g class="buttonGroup" id="" onclick="playerMove(' + x + ',' + j + ',' + l + ')"><rect x="125" y="70" width="104" height="40" id="" class="button" /><text x="177" y="95" fill="#41FF00" text-anchor="middle">South</text></g>';
 					svgRoomData += '<line x1="160" y1="480" x2="320" y2="480" id="doorSouth" />';
 					
-					if (realmData.Levels[level].Rooms[room].Exits[j].exitLocked == 1 ||realmData.Levels[level].Rooms[room].Exits[j].exitBlocked == 1 ||realmData.Levels[level].Rooms[room].Exits[j].exitTrapped == 1) {
+					if (realmData.Levels[level].Rooms[room].Exits[j].exitLocked == 1 || realmData.Levels[level].Rooms[room].Exits[j].exitBlocked == 1 || realmData.Levels[level].Rooms[room].Exits[j].exitTrapped == 1) {
 						svgRoomData += '<polyline points="225,465 240,480 255,465 240,450 225,465" id="obstacleSouth" />';
 					}
 					else
@@ -170,7 +167,7 @@ function buildRoom() {
 					svgControlData += '<g class="buttonGroup" id="" onclick="playerMove(' + x + ',' + j + ',' + l + ')"><rect x="1" y="70" width="104" height="40" id="" class="button" /><text x="52" y="95" fill="#41FF00" text-anchor="middle">West</text></g>';
 					svgRoomData += '<line x1="0" y1="160" x2="0" y2="320" id="doorWest" />';
 					
-					if (realmData.Levels[level].Rooms[room].Exits[j].exitLocked == 1 ||realmData.Levels[level].Rooms[room].Exits[j].exitBlocked == 1 ||realmData.Levels[level].Rooms[room].Exits[j].exitTrapped == 1) {
+					if (realmData.Levels[level].Rooms[room].Exits[j].exitLocked == 1 || realmData.Levels[level].Rooms[room].Exits[j].exitBlocked == 1 || realmData.Levels[level].Rooms[room].Exits[j].exitTrapped == 1) {
 						svgRoomData += '<polyline points="15,225 30,240 15,255 1,240 15,225" id="obstacleWest" />';
 					}
 					else
@@ -180,21 +177,21 @@ function buildRoom() {
 					svgControlData += '<g class="buttonGroup" id="" onclick="playerMove(' + x + ',' + j + ',' + l + ')"><rect x="250" y="15" width="104" height="40" class="button" /><text x="302" y="40" fill="#41FF00" text-anchor="middle">Up</text></g>';
 					svgRoomData += '<polyline points="85,42 69,42 69,57 57,57 57,72 40,72 " id="stairsUp" />';
 
-					if (realmData.Levels[level].Rooms[room].Exits[j].exitLocked == 1 ||realmData.Levels[level].Rooms[room].Exits[j].exitBlocked == 1 ||realmData.Levels[level].Rooms[room].Exits[j].exitTrapped == 1) {
-						svgRoomData += '<line x1="80" y1="57" x2="45" y2="57" id="obstacleUp" />';
+					if (realmData.Levels[level].Rooms[room].Exits[j].exitLocked == 1 || realmData.Levels[level].Rooms[room].Exits[j].exitBlocked == 1 || realmData.Levels[level].Rooms[room].Exits[j].exitTrapped == 1) {
+						svgRoomData += '<polyline points="63,52 68,57 63,62 58,57 63,52" id="obstacleUp" />';
 					}
 					else
-						svgRoomData += '<line x1="80" y1="57" x2="45" y2="57" id="obstacleUp" class="hidden" />';
+						svgRoomData += '<polyline points="63,52 68,57 63,62 58,57 63,52" id="obstacleUp" class="hidden" />';
 				}
 				if (y == "Down") {
 					svgControlData += '<g class="buttonGroup" id="" onclick="playerMove(' + x + ',' + j + ',' + l + ')"><rect x="250" y="70" width="104" height="40" id="" class="button" /><text x="302" y="95" fill="#41FF00" text-anchor="middle">Down</text></g>';
 					svgRoomData += '<polyline points="395,42 411,42 411,57 423,57 423,72 440,72 " id="stairsDown" />';
 					
-					if (realmData.Levels[level].Rooms[room].Exits[j].exitLocked == 1 ||realmData.Levels[level].Rooms[room].Exits[j].exitBlocked == 1 ||realmData.Levels[level].Rooms[room].Exits[j].exitTrapped == 1) {
-						svgRoomData += '<line x1="400" y1="57" x2="434" y2="57" id="obstacleDown" />';
+					if (realmData.Levels[level].Rooms[room].Exits[j].exitLocked == 1 || realmData.Levels[level].Rooms[room].Exits[j].exitBlocked == 1 || realmData.Levels[level].Rooms[room].Exits[j].exitTrapped == 1) {
+						svgRoomData += '<polyline points="417,52 422,57 417,62 412,57 417,52" id="obstacleDown" />';
 					}
 					else
-						svgRoomData += '<line x1="400" y1="57" x2="434" y2="57" id="obstacleDown" class="hidden" />';
+						svgRoomData += '<polyline points="417,52 422,57 417,62 412,57 417,52" id="obstacleDown" class="hidden" />';
 				}
 			}			
 		}
@@ -253,9 +250,19 @@ function checkGameOver(returnMessage) {
 		}
 	}
 	if (gameOver != null) {
-		returnMessage = "Game Over!<p>" + realmData.realmWonMessage;
+		var totalSecrets = realmData.realmTotalSecrets;
+		var foundSecrets = playerData.playerFoundSecrets;
+		var totalRevived = playerData.playerRevived;
+		var totalRan = playerData.playerRan;
+		returnMessage = realmData.realmWonMessage + "<p>Secrets Found: " + foundSecrets + "/" + totalSecrets + " Died: " + totalRevived + " Ran: " + totalRan;
+		if ((foundSecrets < totalSecrets) || totalRevived > 0 || totalRan > 0)
+			returnMessage += "<p>You can do better next time!";
+		else
+			returnMessage += "<p>Great job!";
 		$("#svgControls").empty().html("");
-		resetGameEngine();
+		var svgControlData = '<g class="buttonGroup" id="" onclick="showMorgue()"><rect x="1" y="15" width="104" height="40" class="button" /><text x="52" y="40" fill="#41FF00" text-anchor="middle">Morgue</text></g><g class="buttonGroup" id="" onclick="resetGame()"><rect x="125" y="15" width="104" height="40" class="button" /><text x="177" y="40" fill="#41FF00" text-anchor="middle">Reset</text></g>';
+		
+		$("#svgControls").html(svgControlData);
 	}
 	return returnMessage;
 }
@@ -287,7 +294,11 @@ function checkExperienceLevel() {
 	var currentLevel = playerData.playerLevel;
 	var currentXP = playerData.playerExperience;
 	var currentMaxHP = playerData.playerMaxHitPoints;
+	var currentAP = playerData.playerAbilityPoints;	
 	var returnMessage = "";
+	
+	if (currentAP == null)
+		currentAP = 0;
 	if (currentLevel < (experienceData.length - 1)) {
 		var nextLevelXP = experienceData[currentLevel + 1].experienceRequired;
 		var nextLevelAP = experienceData[currentLevel + 1].experienceAP;
@@ -295,9 +306,10 @@ function checkExperienceLevel() {
 		if (currentXP >= nextLevelXP) {
 			playerData.playerLevel += 1;
 			playerData.playerMaxHitPoints = currentMaxHP + nextLevelHP;
-			playerData.playerAbilityPoints = nextLevelAP;
+			playerData.playerAbilityPoints = nextLevelAP + currentAP;
 			returnMessage = "Level Up! Character Level " + currentLevel + 1;
 			localStorage.set('playerData', playerData);
+			buildHeader();
 		}
 	}
 	
@@ -492,7 +504,7 @@ function buildTrap(trapID) {
 	var missRoll;
 	var maxRoll = realmData.Levels[level].levelRollMax;
 	var trapAvoidDisarm;
-	var	returnMessage = "Trap! " + trapName;
+	var	returnMessage = "Trap! " + trapName + ".";
 	
 	roll = getRoll(1, maxRoll + 1);
 	if (roll > playerDexterity) {
@@ -515,21 +527,22 @@ function buildTrap(trapID) {
 		returnMessage += "<p>You were able to " + trapAvoidDisarm + " the trap.<p>You gained " + trapExperience + " XP.";
 	}
 
-	var foundInMorgue = 0;
-	for (j in morgueData) {
-		x = morgueData[j].morgueID;
-		y = morgueData[j].morgueType;
-		if (y == "R"){
-			if (x == trapID) {
-				morgueData[j].morgueCount += 1;
-				foundInMorgue = 1;
-			}
-		}
-	}
-	if (foundInMorgue == 0) {
-		var morgueDate = new Date();
-		morgueData.push({"morgueID": trapID, "morgueType": "R", "morgueDate": morgueDate.toString(), "morgueCount": 1});
-	}
+	// var foundInMorgue = 0;
+	// for (j in morgueData) {
+		// x = morgueData[j].morgueID;
+		// y = morgueData[j].morgueType;
+		// if (y == "R"){
+			// if (x == trapID) {
+				// morgueData[j].morgueCount += 1;
+				// foundInMorgue = 1;
+			// }
+		// }
+	// }
+	// if (foundInMorgue == 0) {
+		// var morgueDate = new Date();
+		// morgueData.push({"morgueID": trapID, "morgueType": "R", "morgueDate": morgueDate.toString(), "morgueCount": 1});
+	// }
+	addToMorgue(trapID, "R");
 			
 	localStorage.set('playerData', playerData);
 	localStorage.set('morgueData', morgueData);
@@ -742,7 +755,8 @@ function attackHeal(adversaryID) {
 	}, 1200);
 }
 
-function runAway(adversaryID) {	
+function runAway(adversaryID) {
+	var totalRan = playerData.playerRan;
 	var moves = playerData.playerMoves;
 	var level = playerData.realmLevelIndex;
 	var movesToAdd = realmData.Levels[level].levelRunMoves;
@@ -756,6 +770,7 @@ function runAway(adversaryID) {
 	var maxRoll = realmData.Levels[level].levelRollMax;
 	var roll;
 	
+	totalRan += 1;
 	moves += movesToAdd;
 	roll = getRoll(1, maxRoll + 1);
 	if (roll > (playerDexterity + playerLuck)) {
@@ -775,12 +790,13 @@ function runAway(adversaryID) {
 			terminalText += "<p>..and misses.";
 		}
 	}
-	
+	playerData.playerRan = totalRan;
 	playerData.playerMoves = moves;
 	playerData.realmRoomIndex = 0;
 	localStorage.set('playerData', playerData);
 	
 	$("#svgControls").empty().html("");
+	$("#mainMenuButton").addClass("hidden");
 	displayTerminal(terminalText);
 	
 	terminalTimeout = setTimeout(function () {
@@ -827,32 +843,96 @@ function adversaryDefeated(adversaryID, playerDamage) {
 	var room = playerData.realmRoomIndex;
 	var adversaryName = adversaryData[adversaryID].adversaryName;
 	var adversaryExperience = adversaryData[adversaryID].adversaryExperience;
+	var adversaryTreasure = adversaryData[adversaryID].adversaryTreasure;
+	var adversaryTreasureRandom = adversaryData[adversaryID].adversaryTreasureRandom;
+	var hasTreasure = null;
+	var foundTreasure = null;
 	var returnMessage = "You hit and do " + playerDamage + " damage.<p>The " + adversaryName + " has been defeated!<p>You gained " + adversaryExperience + " XP.";
 	
-	var foundInMorgue = 0;
-	for (j in morgueData) {
-		x = morgueData[j].morgueID;
-		y = morgueData[j].morgueType;
-		if (y == "D"){
-			if (x == adversaryID) {
-				morgueData[j].morgueCount += 1;
-				foundInMorgue = 1;
-			}
-		}
-	}
-	if (foundInMorgue == 0) {
-		var morgueDate = new Date();
-		morgueData.push({"morgueID": adversaryID, "morgueType": "D", "morgueDate": morgueDate.toString(), "morgueCount": 1});
-	}
+	// var foundInMorgue = 0;
+	// for (j in morgueData) {
+		// x = morgueData[j].morgueID;
+		// y = morgueData[j].morgueType;
+		// if (y == "D"){
+			// if (x == adversaryID) {
+				// morgueData[j].morgueCount += 1;
+				// foundInMorgue = 1;
+			// }
+		// }
+	// }
+	// if (foundInMorgue == 0) {
+		// var morgueDate = new Date();
+		// morgueData.push({"morgueID": adversaryID, "morgueType": "D", "morgueDate": morgueDate.toString(), "morgueCount": 1});
+	// }
+	addToMorgue(adversaryID, "D");
 	
 	playerData.playerExperience += adversaryExperience;
 	realmData.Levels[level].Rooms[room].roomAdversaryID = null;
 	adversaryData[adversaryID].adversaryHitPoints = adversaryData[adversaryID].adversaryMaxHitPoints;
 	
+	if (adversaryTreasure != null) {
+		hasTreasure = 1;
+		foundTreasure = adversaryTreasure;
+	}
+	else if (adversaryTreasureRandom != null) {
+		var treasureIndex = [];
+		for (j in treasureData) {
+			y = treasureData[j].treasureAllowRandom;
+			if (y == 1){
+				var treasureMaxSpawn = treasureData[j].treasureMaxSpawn;
+				if (treasureMaxSpawn != 0) {
+					var treasureLevelMin = treasureData[j].treasureMinLevel;
+					var treasureLevelMax = treasureData[j].treasureMaxLevel;
+					if (treasureLevelMin == null)
+						treasureLevelMin = 0;
+					if (treasureLevelMax == null)
+						treasureLevelMax = 999;
+					if (treasureLevelMin <= (level + 1) && treasureLevelMax >= (level + 1)) {								
+						treasureIndex.push(j);
+					}
+				}
+			}
+		}
+		var maxRoll = realmData.Levels[level].levelRollMax;
+		var roll = getRoll(1, maxRoll + 1);
+		var level = playerData.realmLevelIndex;
+		var treasureRoll = realmData.Levels[level].levelTreasureRoll;
+		var perception = playerData.playerPerception;
+		if (roll <= (perception + treasureRoll)) {	
+			hasTreasure = 1;		
+			var numTreasures = treasureIndex.length;
+			var whichTreasure = 0;
+			if (numTreasures > 1) {
+				whichTreasure = getRoll(0, numTreasures);
+			}
+			foundTreasure = treasureIndex[whichTreasure];	
+			//alert(foundTreasure);
+		}
+	}
+	
 	localStorage.set('playerData', playerData);
 	localStorage.set('adversaryData', adversaryData);
-	localStorage.set('morgueData', morgueData);
+	//localStorage.set('morgueData', morgueData);
 	localStorage.set('realmData', realmData);
+	
+	if (hasTreasure == null)
+		loadCurrentGame(returnMessage);
+	else {
+		returnMessage += "<p>You found treasure..";
+		buildAdversaryTreasure(foundTreasure, returnMessage);
+	}
+}
+
+function buildAdversaryTreasure(foundTreasure, returnMessage) {
+	var svgControlData = '<g class="buttonGroup" id="" onclick="showAdversaryTreasure(' + foundTreasure + ')"><rect x="1" y="15" width="104" height="40" fill="#282828" class="button" /><text x="52" y="40" fill="#41FF00" text-anchor="middle">Collect</text></g>';
+	$("#svgControls").empty().html("");
+	
+	displayTerminal(returnMessage);	
+	$("#svgControls").html(svgControlData);
+}
+
+function showAdversaryTreasure(foundTreasure) {
+	var returnMessage = addTreasure(foundTreasure);
 	loadCurrentGame(returnMessage);
 }
 
@@ -911,7 +991,7 @@ function buildObstacle(obstacleType, direction, exitID, levelID) {
 	
 	if (obstacleType == 1) {
 		exitObstacle = "Exit Blocked";
-		terminalText = "You need to shove (STR) or blast (INT) this obstacle to move forward.";
+		terminalText = "Shove (STR) or blast (INT) this obstacle.";
 		svgControlData += '<g class="buttonGroup" id="" onclick="removeObstacle(1, ' + direction + ', ' + exitID + ', ' + levelID + ')"><rect x="1" y="15" width="104" height="40" fill="#282828" class="button" /><text x="52" y="40" fill="#41FF00" text-anchor="middle">Shove</text></g>';
 		if (playerMagic != null)
 			svgControlData += '<g class="buttonGroup" id="" onclick="removeObstacle(2, ' + direction + ', ' + exitID + ', ' + levelID + ')"><rect x="125" y="15" width="104" height="40" class="button" /><text x="177" y="40" fill="#41FF00" text-anchor="middle">Blast</text></g>';
@@ -922,12 +1002,12 @@ function buildObstacle(obstacleType, direction, exitID, levelID) {
 	}
 	else if (obstacleType == 2) {
 		exitObstacle = "Exit Locked";
-		terminalText = "You need to pick (DEX) or kick (STR) this lock to move forward.";
+		terminalText = "Pick (DEX) or kick (STR) this lock.";
 		svgControlData += '<g class="buttonGroup" id="" onclick="removeObstacle(3, ' + direction + ', ' + exitID + ', ' + levelID + ')"><rect x="1" y="15" width="104" height="40" fill="#282828" class="button" /><text x="52" y="40" fill="#41FF00" text-anchor="middle">Pick</text></g><g class="buttonGroup" id="" onclick="removeObstacle(4, ' + direction + ', ' + exitID + ', ' + levelID + ')"><rect x="125" y="15" width="104" height="40" class="button" /><text x="177" y="40" fill="#41FF00" text-anchor="middle">Kick</text></g>';
 	}
 	else if (obstacleType == 3) {
 		exitObstacle = "Exit Trapped";
-		terminalText = "You need to disarm (DEX) or ignore (LCK) the trap.";
+		terminalText = "Disarm (DEX) or ignore (LCK) the trap.";
 		svgControlData += '<g class="buttonGroup" id="" onclick="removeObstacle(5, ' + direction + ', ' + exitID + ', ' + levelID + ')"><rect x="1" y="15" width="104" height="40" fill="#282828" class="button" /><text x="52" y="40" fill="#41FF00" text-anchor="middle">Disarm</text></g><g class="buttonGroup" id="" onclick="removeObstacle(6, ' + direction + ', ' + exitID + ', ' + levelID + ')"><rect x="125" y="15" width="104" height="40" class="button" /><text x="177" y="40" fill="#41FF00" text-anchor="middle">Ignore</text></g>';
 	}
 	
@@ -964,7 +1044,7 @@ function removeObstacle(attemptID, direction, exitID, levelID) {
 		probability = getProbability(playerStrength + obstacleRoll);
 		if (roll <= (probability)) {
 			failed = null;
-			resultMessage = "You shoved the obstruction out of the way!<p> You gained " + obstacleXP + " XP.";
+			resultMessage = "Obstruction shoved clear!<p> You gained " + obstacleXP + " XP.";
 			realmData.Levels[level].Rooms[room].Exits[exitID].exitBlocked = null;
 		}
 	}
@@ -973,7 +1053,7 @@ function removeObstacle(attemptID, direction, exitID, levelID) {
 		probability = getProbability(playerIntelligence + obstacleRoll);
 		if (roll <= (probability)) {
 			failed = null;
-			resultMessage = "You blasted the obstruction out of the way!<p> You gained " + obstacleXP + " XP.";
+			resultMessage = "Obstruction blasted away!<p> You gained " + obstacleXP + " XP.";
 			realmData.Levels[level].Rooms[room].Exits[exitID].exitBlocked = null;
 		}
 	}
@@ -1033,27 +1113,32 @@ function removeObstacle(attemptID, direction, exitID, levelID) {
 }
 
 function playerDied(beforeYouGo) {
+	var totalRevived = playerData.playerRevived;
 	var moves = playerData.playerMoves;
 	var level = playerData.realmLevelIndex;
 	var movesToAdd = realmData.Levels[level].levelDeadMoves;
 	var divideHP = realmData.Levels[level].levelDeadHPDivider;
 	var maxHitPoints = playerData.playerMaxHitPoints;
 	var divideHitPoints = Math.round(maxHitPoints / divideHP);
+	totalRevived += 1;
 	moves += movesToAdd;
 	var returnMessage = "..and magically come back to life!<p>Though you feel like you have gone through a meat grinder. <p>" + divideHitPoints + " hit points have been restored and " + movesToAdd + " moves added.";
 	playerData.playerHitPoints = 0;
 	buildHeader();
 	playerData.playerHitPoints = divideHitPoints;
+	playerData.playerRevived = totalRevived;
 	playerData.playerMoves = moves;
 	playerData.realmRoomIndex = 0;
 	localStorage.set('playerData', playerData);
 	
 	$("#svgControls").empty().html("");
+	$("#mainMenuButton").addClass("hidden");
 	displayTerminal(beforeYouGo + "Oh darn! You appear to have died..");
 	setTimeout(function () {
 		$("#mainGame").fadeOut(3000, "linear");
 		terminalTimeout = setTimeout(function () {
 			$("#mainGame").fadeIn(2300);
+			$("#mainMenuButton").removeClass("hidden");
 			loadCurrentGame(returnMessage);
 		}, 3100);
 	}, 1200);
@@ -1141,10 +1226,6 @@ function searchRoom() {
 			var foundTreasure;
 			if (treasureID != null)
 				treasureType = 1;
-			else if (treasureIndex != "") {
-				//treasureType = getRoll(0, 2);
-				treasureType = 0;
-			}
 			if (treasureType == 0) {
 				var numTreasures = treasureIndex.length;
 				var whichTreasure = 0;
@@ -1166,145 +1247,11 @@ function searchRoom() {
 			else
 				realmData.Levels[level].Rooms[room].roomTreasureID = null;
 			
-			var treasureName = treasureData[foundTreasure].treasureName;
-			treasureType = treasureData[foundTreasure].treasureType;  
-			treasureMaxSpawn = treasureData[foundTreasure].treasureMaxSpawn;
-			var treasureProtection = treasureData[foundTreasure].treasureProtection; 
-			var treasureDamage = treasureData[foundTreasure].treasureDamage; 
-			var treasureExperience = treasureData[foundTreasure].treasureExperience; 
-			var treasureValue = treasureData[foundTreasure].treasureValue;
-			var playerGold = playerData.playerGold;
-			var playerPotions = playerData.playerPotions;
-			var playerArmor = playerData.currentArmorIndex;
-			var playerArmorProtection = treasureData[playerArmor].treasureProtection;
-			var playerWeapon = playerData.currentWeaponIndex;
-			var playerWeaponDamage = treasureData[playerWeapon].treasureDamage;
-			var playerMagic = playerData.currentMagicIndex;
-			var playerMagicDamage;
-			returnMessage = "You find ";
-			
-			if (playerMagic != null)
-				playerMagicDamage = treasureData[playerMagic].treasureDamage;
-			else if (playerMagicDamage == null)
-				playerMagicDamage = 0;
-			
-			if (treasureMaxSpawn != null)
-				treasureData[foundTreasure].treasureMaxSpawn -= 1;
-			
-			if (treasureExperience != null) {
-				playerExperience += treasureExperience;
-				playerData.playerExperience = playerExperience;
-			}
-			else
-				treasureExperience = 0;
-			
-			if (treasureType == "V") {
-				returnMessage += treasureName;
-				if (treasureValue != null){
-					playerGold += treasureValue;
-					playerData.playerGold = playerGold;
-					returnMessage += "<p>You collected "  + treasureValue + " Gold and earned " + treasureExperience + " XP.";
-				}
-			}
-			else if (treasureType == "P") {
-				returnMessage += "a " + treasureName;
-				playerPotions += 1;
-				playerData.playerPotions = playerPotions;
-				returnMessage += "<p>You earned " + treasureExperience + " XP.";
-			}
-			else if (treasureType == "A") {
-				returnMessage += "-" + treasureProtection + " " + treasureName;
-				if (treasureProtection >= playerArmorProtection) {
-					var currentArmorIndex = playerData.currentArmorIndex;
-					var currentTreasureValue = treasureData[currentArmorIndex].treasureValue;
-					returnMessage += "<p>New armor equipped. ";
-					if (currentTreasureValue != null) {
-						playerGold += currentTreasureValue;
-						playerData.playerGold = playerGold;
-						returnMessage += "Old armor exchanged for "  + currentTreasureValue + " Gold.";
-					}
-					playerData.currentArmorIndex = foundTreasure;
-				}
-				else {
-					if (treasureValue != null){
-						playerGold += treasureValue;
-						playerData.playerGold = playerGold;
-						returnMessage += "<p>Armor exchanged for "  + treasureValue + " Gold";
-					}
-				}
-				returnMessage += "<p>You earned " + treasureExperience + " XP.";
-			}
-			else if (treasureType == "W") {
-				returnMessage += "+" + treasureDamage + " " + treasureName;		
-				if (treasureDamage >= playerWeaponDamage) {
-					var currentWeaponIndex = playerData.currentWeaponIndex;
-					var currentTreasureValue = treasureData[currentWeaponIndex].treasureValue;
-					returnMessage += "<p>New weapon equipped. ";
-					if (currentTreasureValue != null) {
-						playerGold += currentTreasureValue;
-						playerData.playerGold = playerGold;
-						returnMessage += "Old weapon exchanged for "  + currentTreasureValue + " Gold.";
-					}
-					playerData.currentWeaponIndex = foundTreasure;
-				}
-				else {
-					if (treasureValue != null) {
-						playerGold += treasureValue;
-						playerData.playerGold = playerGold;;
-						returnMessage += "<p>Weapon exchanged for "  + treasureValue + " Gold.";
-					}
-				}
-				returnMessage += "<p>You earned " + treasureExperience + " XP.";
-			}
-			else if (treasureType == "M") {
-				returnMessage += "+" + treasureDamage + " " + treasureName;
-				if (treasureDamage >= playerMagicDamage) {
-					var currentMagicIndex = playerData.currentMagicIndex;
-					var currentTreasureValue;
-					if (currentMagicIndex != null)
-						currentTreasureValue = treasureData[currentMagicIndex].treasureValue;
-					else
-						currentTreasureValue = 0;
-					returnMessage += "<p>New magic equipped. ";
-					if (currentTreasureValue != null) {
-						playerGold += currentTreasureValue;
-						playerData.playerGold = playerGold;
-						returnMessage += "Old magic exchanged for "  + currentTreasureValue + " Gold.";
-					}
-					playerData.currentMagicIndex = foundTreasure;
-				}
-				else {
-					if (treasureValue != null) {
-						playerGold += treasureValue;
-						playerData.playerGold = playerGold;
-						returnMessage += "<p>Magic exchanged for "  + treasureValue + " Gold.";
-					}
-				}
-				returnMessage += "<p>You earned " + treasureExperience + " XP.";
-			}
-
-			var foundInMorgue = 0;
-			for (j in morgueData) {
-				x = morgueData[j].morgueID;
-				y = morgueData[j].morgueType;
-				if (y == "A" || y == "W" || y == "M" || y == "V" || y == "P"){
-					if (x == foundTreasure) {
-						morgueData[j].morgueCount += 1;
-						foundInMorgue = 1;
-					}
-				}
-			}
-			if (foundInMorgue == 0) {
-				var morgueDate = new Date();
-				morgueData.push({"morgueID": foundTreasure, "morgueType": treasureType, "morgueDate": morgueDate.toString(), "morgueCount": 1});
-			}
-			
-			localStorage.set('playerData', playerData);
-			localStorage.set('treasureData', treasureData);
-			localStorage.set('realmData', realmData);
-			localStorage.set('morgueData', morgueData);
+			localStorage.set('realmData', realmData);			
+			returnMessage = addTreasure(foundTreasure);
 		}
 		else if (searchType == 2) {
+			var foundSecrets = playerData.playerFoundSecrets;
 			var numDoors = secretIndex.length;
 			var whichDoor = 0;
 			if (numDoors > 1) {
@@ -1315,6 +1262,8 @@ function searchRoom() {
 			returnMessage = "You find a secret door leading " + secretDoorDirection + "! <p>You earned " + secretDoorXP + " XP.";
 			realmData.Levels[level].Rooms[room].Exits[secretDoor].exitSecret = null;
 			
+			foundSecrets += 1;
+			playerData.playerFoundSecrets = foundSecrets;
 			playerExperience += secretDoorXP;
 			playerData.playerExperience = playerExperience;
 			
@@ -1328,6 +1277,149 @@ function searchRoom() {
 	terminalTimeout = setTimeout(function () {
 		loadCurrentGame(returnMessage);
 	}, 1000);	
+}
+
+function addTreasure(foundTreasure) {
+	var treasureName = treasureData[foundTreasure].treasureName;
+	treasureType = treasureData[foundTreasure].treasureType;  
+	treasureMaxSpawn = treasureData[foundTreasure].treasureMaxSpawn;
+	var treasureProtection = treasureData[foundTreasure].treasureProtection; 
+	var treasureDamage = treasureData[foundTreasure].treasureDamage; 
+	var treasureExperience = treasureData[foundTreasure].treasureExperience; 
+	var treasureValue = treasureData[foundTreasure].treasureValue;
+	var playerGold = playerData.playerGold;
+	var playerPotions = playerData.playerPotions;
+	var playerArmor = playerData.currentArmorIndex;
+	var playerArmorProtection = treasureData[playerArmor].treasureProtection;
+	var playerWeapon = playerData.currentWeaponIndex;
+	var playerWeaponDamage = treasureData[playerWeapon].treasureDamage;
+	var playerMagic = playerData.currentMagicIndex;
+	var playerExperience = playerData.playerExperience;
+	var playerMagicDamage;
+	returnMessage = "You find ";
+	
+	if (playerMagic != null)
+		playerMagicDamage = treasureData[playerMagic].treasureDamage;
+	else if (playerMagicDamage == null)
+		playerMagicDamage = 0;
+	
+	if (treasureMaxSpawn != null)
+		treasureData[foundTreasure].treasureMaxSpawn -= 1;
+	
+	if (treasureExperience != null) {
+		playerExperience += treasureExperience;
+		playerData.playerExperience = playerExperience;
+	}
+	else
+		treasureExperience = 0;
+	
+	if (treasureType == "V") {
+		returnMessage += treasureName + ".";
+		if (treasureValue != null){
+			playerGold += treasureValue;
+			playerData.playerGold = playerGold;
+			returnMessage += "<p>You collected "  + treasureValue + " GLD and gained " + treasureExperience + " XP.";
+		}
+	}
+	else if (treasureType == "P") {
+		returnMessage += "a " + treasureName + ".";
+		playerPotions += 1;
+		playerData.playerPotions = playerPotions;
+		returnMessage += "<p>You gained " + treasureExperience + " XP.";
+	}
+	else if (treasureType == "A") {
+		returnMessage += "-" + treasureProtection + " " + treasureName + ".";
+		if (treasureProtection >= playerArmorProtection) {
+			var currentArmorIndex = playerData.currentArmorIndex;
+			var currentTreasureValue = treasureData[currentArmorIndex].treasureValue;
+			returnMessage += "<p>New armor equipped. ";
+			if (currentTreasureValue != null) {
+				playerGold += currentTreasureValue;
+				playerData.playerGold = playerGold;
+				returnMessage += "<p>Old armor exchanged for "  + currentTreasureValue + " GLD.";
+			}
+			playerData.currentArmorIndex = foundTreasure;
+		}
+		else {
+			if (treasureValue != null){
+				playerGold += treasureValue;
+				playerData.playerGold = playerGold;
+				returnMessage += "<p>Armor exchanged for "  + treasureValue + " GLD";
+			}
+		}
+		returnMessage += "<p>You gained " + treasureExperience + " XP.";
+	}
+	else if (treasureType == "W") {
+		returnMessage += "+" + treasureDamage + " " + treasureName + ".";		
+		if (treasureDamage >= playerWeaponDamage) {
+			var currentWeaponIndex = playerData.currentWeaponIndex;
+			var currentTreasureValue = treasureData[currentWeaponIndex].treasureValue;
+			returnMessage += "<p>New weapon equipped. ";
+			if (currentTreasureValue != null) {
+				playerGold += currentTreasureValue;
+				playerData.playerGold = playerGold;
+				returnMessage += "<p>Old weapon exchanged for "  + currentTreasureValue + " GLD.";
+			}
+			playerData.currentWeaponIndex = foundTreasure;
+		}
+		else {
+			if (treasureValue != null) {
+				playerGold += treasureValue;
+				playerData.playerGold = playerGold;;
+				returnMessage += "<p>Weapon exchanged for "  + treasureValue + " GLD.";
+			}
+		}
+		returnMessage += "<p>You gained " + treasureExperience + " XP.";
+	}
+	else if (treasureType == "M") {
+		returnMessage += "+" + treasureDamage + " " + treasureName + ".";
+		if (treasureDamage >= playerMagicDamage) {
+			var currentMagicIndex = playerData.currentMagicIndex;
+			var currentTreasureValue;
+			if (currentMagicIndex != null)
+				currentTreasureValue = treasureData[currentMagicIndex].treasureValue;
+			//else
+			//	currentTreasureValue = 0;
+			returnMessage += "<p>New magic equipped. ";
+			if (currentTreasureValue != null) {
+				playerGold += currentTreasureValue;
+				playerData.playerGold = playerGold;
+				returnMessage += "<p>Old magic exchanged for "  + currentTreasureValue + " GLD.";
+			}
+			playerData.currentMagicIndex = foundTreasure;
+		}
+		else {
+			if (treasureValue != null) {
+				playerGold += treasureValue;
+				playerData.playerGold = playerGold;
+				returnMessage += "<p>Magic exchanged for "  + treasureValue + " GLD.";
+			}
+		}
+		returnMessage += "<p>You gained " + treasureExperience + " XP.";
+	}
+
+	// var foundInMorgue = 0;
+	// for (j in morgueData) {
+		// x = morgueData[j].morgueID;
+		// y = morgueData[j].morgueType;
+		// if (y == "A" || y == "W" || y == "M" || y == "V" || y == "P"){
+			// if (x == foundTreasure) {
+				// morgueData[j].morgueCount += 1;
+				// foundInMorgue = 1;
+			// }
+		// }
+	// }
+	// if (foundInMorgue == 0) {
+		// var morgueDate = new Date();
+		// morgueData.push({"morgueID": foundTreasure, "morgueType": treasureType, "morgueDate": morgueDate.toString(), "morgueCount": 1});
+	// }	
+	addToMorgue(foundTreasure, treasureType);
+	
+	localStorage.set('playerData', playerData);
+	localStorage.set('treasureData', treasureData);
+	//localStorage.set('morgueData', morgueData);
+	
+	return returnMessage;
 }
 
 function checkStats(potion) {
@@ -1590,12 +1682,46 @@ function purchaseItem(merchantRowID) {
 		playerData.playerPotions += 1;
 	}
 
+	// var foundInMorgue = 0;
+	// for (j in morgueData) {
+		// x = morgueData[j].morgueID;
+		// y = morgueData[j].morgueType;
+		// if (y == "A" || y == "W" || y == "M" || y == "V" || y == "P"){
+			// if (x == treasureID) {
+				// morgueData[j].morgueCount += 1;
+				// foundInMorgue = 1;
+			// }
+		// }
+	// }
+	// if (foundInMorgue == 0) {
+		// var morgueDate = new Date();
+		// morgueData.push({"morgueID": treasureID, "morgueType": itemType, "morgueDate": morgueDate.toString(), "morgueCount": 1});
+	// }
+	
+	// if (playerData.currentWeaponIndex > 1)
+		// $("#playerWeapon").removeClass("hidden");
+	
+	// if (playerData.currentMagicIndex != null)
+		// $("#playerMagic").removeClass("hidden");
+	
+	addToMorgue(treasureID, itemType);
+	
+	$("#svgRoom").prepend(svgRoomData);
+	
+	localStorage.set('playerData', playerData);
+	//localStorage.set('morgueData', morgueData);
+	
+	buildHeader();
+	summonMerchant();
+}
+
+function addToMorgue(morgueID, morgueType) {
 	var foundInMorgue = 0;
 	for (j in morgueData) {
 		x = morgueData[j].morgueID;
 		y = morgueData[j].morgueType;
-		if (y == "A" || y == "W" || y == "M" || y == "V" || y == "P"){
-			if (x == treasureID) {
+		if (y == morgueType){
+			if (x == morgueID) {
 				morgueData[j].morgueCount += 1;
 				foundInMorgue = 1;
 			}
@@ -1603,7 +1729,7 @@ function purchaseItem(merchantRowID) {
 	}
 	if (foundInMorgue == 0) {
 		var morgueDate = new Date();
-		morgueData.push({"morgueID": treasureID, "morgueType": itemType, "morgueDate": morgueDate.toString(), "morgueCount": 1});
+		morgueData.push({"morgueID": morgueID, "morgueType": morgueType, "morgueDate": morgueDate.toString(), "morgueCount": 1});
 	}
 	
 	if (playerData.currentWeaponIndex > 1)
@@ -1612,13 +1738,7 @@ function purchaseItem(merchantRowID) {
 	if (playerData.currentMagicIndex != null)
 		$("#playerMagic").removeClass("hidden");
 	
-	$("#svgRoom").prepend(svgRoomData);
-	
-	localStorage.set('playerData', playerData);
 	localStorage.set('morgueData', morgueData);
-	
-	buildHeader();
-	summonMerchant();
 }
 
 function buildMorgue() {
@@ -1639,14 +1759,16 @@ function buildMorgue() {
 		var itemName = "Unknown";
 		var itemDescription = "No Description";
 		
-		if (y == "R" || y == "D" || y == "A" || y == "W" || y == "M" || y == "V" || y == "P"){
+		if (y == "R" || y == "D" || y == "A" || y == "W" || y == "M" || y == "V" || y == "P") {
 			if (y == "R") {
 				mType = "Trap";
+				mDamage = "";
 				itemName = trapData[x].trapName;
 				itemDescription = trapData[x].trapDescription;
 			}
 			if (y == "D") {
 				mType = "Adversary";
+				mDamage = "";
 				itemName = adversaryData[x].adversaryName;
 				itemDescription = adversaryData[x].adversaryDescription;
 			}
@@ -1673,11 +1795,13 @@ function buildMorgue() {
 			}
 			if (y == "V") {			
 				mType = "Valuable";
+				mDamage = "";
 				itemName = treasureData[x].treasureName;
 				itemDescription = treasureData[x].treasureDescription;
 			}
 			if (y == "P") {
 				mType = "Potion";
+				mDamage = "";
 				itemName = treasureData[x].treasureName;
 				itemDescription = treasureData[x].treasureDescription;
 			}
@@ -1688,7 +1812,7 @@ function buildMorgue() {
 		}
 	}
 	if (morgueContainer != "")
-		morgueContainer += '<a class="right" onclick="goToByScroll(\'mainMenuButton\')">[ Top ]</a><p>';
+		morgueContainer += '<a class="right" onclick="goToByScroll(\'mainMenuButton\')">[ Top ]</a><div><a class="right" onclick="showMenu()">[ Menu ]</a></div><p>';
 	else
 		morgueContainer = "<p>Nothing collected yet.";
 	$("#morgueContainer").html(morgueContainer);
