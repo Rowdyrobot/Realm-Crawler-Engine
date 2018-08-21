@@ -52,7 +52,7 @@
 		"treasureProtection": null, 
 		"treasureDamage": 2, 
 		"treasureExperience": 5, 
-		"treasureValue": 2, 
+		"treasureValue": 3, 
 		"treasureLevelMultiplier": null,
 		"treasureMinLevel": null, 
 		"treasureMaxLevel": null,
@@ -141,13 +141,43 @@
 		"treasureDescription": "Better than nothing.",
 		"treasureProtection": null, 
 		"treasureDamage": null, 
-		"treasureExperience": 0, 
+		"treasureExperience": 1, 
+		"treasureValue": 9, 
+		"treasureLevelMultiplier": null,
+		"treasureMinLevel": null, 
+		"treasureMaxLevel": null,
+		"treasureAllowRandom": 1, 
+		"treasureMaxSpawn": null
+	},
+	{
+		"treasureID": 10,
+		"treasureType": "M", 
+		"treasureName": "Broken Wand",
+		"treasureDescription": "Good start?",
+		"treasureProtection": null, 
+		"treasureDamage": 3, 
+		"treasureExperience": 4, 
 		"treasureValue": 3, 
 		"treasureLevelMultiplier": null,
 		"treasureMinLevel": null, 
 		"treasureMaxLevel": null,
 		"treasureAllowRandom": null, 
 		"treasureMaxSpawn": null
+	},
+	{
+		"treasureID": 11,
+		"treasureType": "W", 
+		"treasureName": "Sword of Winning",
+		"treasureDescription": "Now we're cooking with fire!",
+		"treasureProtection": null, 
+		"treasureDamage": 20, 
+		"treasureExperience": 20, 
+		"treasureValue": 44, 
+		"treasureLevelMultiplier": null,
+		"treasureMinLevel": null, 
+		"treasureMaxLevel": null,
+		"treasureAllowRandom": null, 
+		"treasureMaxSpawn": 1
 	}
 ]
 

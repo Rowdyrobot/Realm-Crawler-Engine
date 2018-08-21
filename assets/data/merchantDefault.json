@@ -14,6 +14,15 @@
 			"itemMaxLevel": null
 		},
 		{
+			"itemID": 10, 
+			"itemValue": 22,
+			"itemLevelMultiplier": 1,
+			"itemMaxCount": null,
+			"itemMinPlayerLevel": null,
+			"itemMinLevel": null, 
+			"itemMaxLevel": null
+		},
+		{
 			"itemID": 3, 
 			"itemValue": 20,
 			"itemLevelMultiplier": 1,

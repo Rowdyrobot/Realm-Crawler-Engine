@@ -1,18 +1,19 @@
 {
 	"realmName": "Traps and Treasure", 
-	"realmID": 1, 
+	"realmID": 1,
+	"realmTotalSecrets": 5,
 	"realmLevelToWin": 1,
-	"realmRoomToWin": 0,
-	"realmTreasureToWin": 7,
-	"realmWonMessage": "Amazingly you have survived and found the exit out of this miserable realm.",
+	"realmRoomToWin": 1,
+	"realmTreasureToWin": 11,
+	"realmWonMessage": "Game Over!<p>Amazingly you have survived and found the exit out of this miserable realm.",
 	"Levels": 
 	[
 		{
 			"levelNumber": 0, 
 			"levelRollMax": 10, 
-			"levelTreasureRoll": 5, 
-			"levelTrapRoll": 3, 
-			"levelAdversaryRoll": 4,
+			"levelTreasureRoll": 7, 
+			"levelTrapRoll": 8, 
+			"levelAdversaryRoll": 9,
 			"levelObstacleRoll": 6, 
 			"levelSecretDoorXP": 7,
 			"levelDeadMoves": 50,
@@ -24,11 +25,11 @@
 					"roomID": 0, 
 					"roomName": "Dizzingly Deep Pit", 
 					"roomDescriptionOnce": "You open a blurry eye and see sunlight streaming down in from the top of a very deep pit that you are at the bottom of. How did you get here?<p>You cannot see a way out.",
-					"roomDescription": null,
+					"roomDescription": "This place is awful familiar.",
 					"roomTreasureID": null,
-					"roomTreasureRandom": null,
+					"roomTreasureRandom": 1,
 					"roomTrapID": null,
-					"roomTrapRandom": 1,
+					"roomTrapRandom": null,
 					"roomAdversaryID": null,
 					"roomAdversaryRandom": null,
 					"Exits": 
@@ -77,7 +78,7 @@
 					"roomName": "Northern Reach",
 					"roomDescriptionOnce": null,
 					"roomDescription": null,
-					"roomTreasureID": 3,
+					"roomTreasureID": null,
 					"roomTreasureRandom": 2,
 					"roomTrapID": 0,
 					"roomTrapRandom": 1,
@@ -101,12 +102,12 @@
 					"roomName": "Eastern Hall", 
 					"roomDescriptionOnce": null,
 					"roomDescription": null, 
-					"roomTreasureID": null,  
+					"roomTreasureID": 10,  
 					"roomTreasureRandom": null,
 					"roomTrapID": null, 
 					"roomTrapRandom": null,
 					"roomAdversaryID": null,
-					"roomAdversaryRandom": null, 
+					"roomAdversaryRandom": 2, 
 					"Exits": 
 					[
 						{
@@ -130,7 +131,7 @@
 					"roomTrapID": null, 
 					"roomTrapRandom": 1,
 					"roomAdversaryID": null,
-					"roomAdversaryRandom": null, 
+					"roomAdversaryRandom": 5, 
 					"Exits": 
 					[
 						{
@@ -163,7 +164,7 @@
 					"roomTrapID": null, 
 					"roomTrapRandom": null,
 					"roomAdversaryID": null,
-					"roomAdversaryRandom": null, 
+					"roomAdversaryRandom": 1, 
 					"Exits": 
 					[
 						{
@@ -180,7 +181,7 @@
 							"exitSecret": 0, 
 							"exitRoomID": 6,
 							"newLevelID": null,
-                            "exitLocked": null,
+                            "exitLocked": 1,
                             "exitBlocked": null,
                             "exitTrapped": null
 						}
@@ -192,11 +193,11 @@
 					"roomDescriptionOnce": null,
 					"roomDescription": null, 
 					"roomTreasureID": 7, 
-					"roomTreasureRandom": 1,
+					"roomTreasureRandom": 3,
 					"roomTrapID": null, 
 					"roomTrapRandom": 1,
 					"roomAdversaryID": null,
-					"roomAdversaryRandom": null, 
+					"roomAdversaryRandom": 1, 
 					"Exits": 
 					[
 						{
@@ -225,10 +226,10 @@
 					"roomDescriptionOnce": null,
 					"roomDescription": null, 
 					"roomTreasureID": 2, 
-					"roomTreasureRandom": null,
+					"roomTreasureRandom": 5,
 					"roomTrapID": null,
 					"roomTrapRandom": null,
-					"roomAdversaryID": null,
+					"roomAdversaryID": 0,
 					"roomAdversaryRandom": null, 
 					"Exits": 
 					[
@@ -267,7 +268,7 @@
 					"roomTreasureRandom": null,
 					"roomTrapID": null,
 					"roomTrapRandom": null,
-					"roomAdversaryID": null,
+					"roomAdversaryID": 3,
 					"roomAdversaryRandom": 1,
 					"Exits": 
 					[
@@ -276,6 +277,39 @@
 							"exitSecret": null, 
 							"exitRoomID": 5, 
 							"newLevelID": 0,
+                            "exitLocked": null,
+                            "exitBlocked": null,
+                            "exitTrapped": null
+						},
+						{
+							"exitDirection": "West", 
+							"exitSecret": 1, 
+							"exitRoomID": 1, 
+							"newLevelID": null,
+                            "exitLocked": null,
+                            "exitBlocked": null,
+                            "exitTrapped": null
+						}
+					]
+				},
+				{
+					"roomID": 1, 
+					"roomName": "Swampy Clearing", 
+					"roomDescriptionOnce": null,
+					"roomDescription": null,
+					"roomTreasureID": null,
+					"roomTreasureRandom": null,
+					"roomTrapID": null,
+					"roomTrapRandom": null,
+					"roomAdversaryID": null,
+					"roomAdversaryRandom": 1,
+					"Exits": 
+					[
+						{
+							"exitDirection": "East", 
+							"exitSecret": null, 
+							"exitRoomID": 0, 
+							"newLevelID": null,
                             "exitLocked": null,
                             "exitBlocked": null,
                             "exitTrapped": null

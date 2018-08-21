@@ -19,5 +19,12 @@
 		"experienceAP": 2,
 		"experienceHP": 5,
 		"experienceName": "Not So Green"
+	},
+	{
+		"experienceLevel": 3,
+		"experienceRequired": 100, 
+		"experienceAP": 3,
+		"experienceHP": 15,
+		"experienceName": "Acolyte"
 	}
 ]
