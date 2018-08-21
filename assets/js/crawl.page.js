@@ -59,81 +59,12 @@ function showTutorial() {
 	$("#mainTutorial").removeClass("hidden");
 }
 
-function showSaveLoad() {
-	clearScreens();
-	$("#mainSave").removeClass("hidden");
-}
-
-function showExclusives() {
-	clearScreens();
-	$("#mainSupport").removeClass("hidden");
-}
-
-function showSaveGame() {
-	clearSaveLoad();
-	$("#saveGame").show();
-	$("#txtEmail").focus();
-}
-
-function showLoadGame() {
-	clearSaveLoad();
-	$("#loadGame").show();
-	$("#txtLoadCode").focus();
-}
-
-function showBonusContent() {
-	clearSaveLoad();
-	$("#bonusContent").show();
-	$("#txtSponsorCode").focus();
-}
-
-function sendGameSave() {
-	$("#gameSaveSent").toggle();
-}
-
-function loadGame() {
-	$("#loadingGame").toggle();
-}
-
-function getBonusContent() {
-	$("#displayBonusContent").toggle();
-}
-
-$("#txtEmail").keydown(function(e) {
-	if (e.keyCode == 13 || e.keyCode == 9) {
-		sendGameSave();
-		return false;
-	}
-});
-
-$("#txtLoadCode").keydown(function(e) {
-	if (e.keyCode == 13 || e.keyCode == 9) {
-		loadGame();
-		return false;
-	}
-});
-
-$("#txtSponsorCode").keydown(function(e) {
-	if (e.keyCode == 13 || e.keyCode == 9) {
-		getBonusContent();
-		return false;
-	}
-});
-
 function clearScreens() {
 	$("#mainSplash").addClass("hidden");
 	$("#mainMenuButton").removeClass("hidden");
 	$("#mainGame").addClass("hidden");
 	$("#mainMorgue").addClass("hidden");
 	$("#mainTutorial").addClass("hidden");
-	$("#mainSupport").addClass("hidden");
-	$("#mainSave").addClass("hidden");
-}
-
-function clearSaveLoad() {			
-	$("#saveGame").hide();
-	$("#loadGame").hide();
-	$("#bonusContent").hide();
 }
 
 function goToByScroll(id){
